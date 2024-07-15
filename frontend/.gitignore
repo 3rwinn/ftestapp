@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Dockerfile
+
+
+# Ignore those pages
+src/pages/engagements/
+src/pages/finances/
+src/pages/quotidien/
+src/pages/settings/
+
+# Ignore those components
+src/features/engagement/
+src/features/finance/
+src/features/quotidien/
+src/features/settings/
+src/components/engagement/
+src/components/finances/
+src/components/quotidien/
+src/components/settings/
+
+

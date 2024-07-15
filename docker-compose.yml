@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  backend:
+    build: ./backend
+    networks:
+      - backend-network
+    volumes:
+      - ./backend:/usr/src/app
+    env_file:
+      - ./.env.dev
+    ports:
+      - 8000:8000
+
+
+  frontend:
+    stdin_open: true
+    build: ./frontend
+    networks:
+      - backend-network
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3001:3001
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
+networks:
+    backend-network:
